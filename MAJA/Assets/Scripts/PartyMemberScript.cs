@@ -9,15 +9,15 @@ public class PartyMemberScript : BaseUnit{
     {
         for (int i = 0; i < actionButtons.Length; i++)
         {
-            actionButtons[i].text = ability[i].attack_name;
+            //actionButtons[i].text = ability[i].attack_name;
         }
 
     }
 
     public void PerformAttack(int attackNumber)
     {
-        target.RecieveDamage(ability[attackNumber].damage);
-        GameManager.AttackDone();
+        //target.RecieveDamage(ability[attackNumber].damage);
+        //GameManager.AttackDone();
 
     }
 
