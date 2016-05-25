@@ -217,6 +217,27 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e58e375f5ed38074480b5df1226c7bc3, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &214824884 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100258, guid: e58e375f5ed38074480b5df1226c7bc3, type: 3}
+  m_PrefabInternal: {fileID: 214824883}
+--- !u!95 &214824885
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214824884}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 873be54ab3ad1b6428e9a96c5509c11b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &405523037 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100702, guid: a8fe9acb1e0f9f74c81a0ac4738f9efe, type: 2}
