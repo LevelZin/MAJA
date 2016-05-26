@@ -1,15 +1,45 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+
+
+
+
 public class BaseUnit : MonoBehaviour
 {
+    int StatHP;
+    int StatSP;
+    int StatPow;
+    int StatRes;
+    int StatSpd;
+    public static bool cReady = false;
+
+
+    public virtual void tick()
+    {
+        initiative += StatSpd;
+
+        if (initiative<=1000)
+        {
+            cReady = true;
+        }
+
+
+    }
 
     [SerializeField]
-    [Range(0, 100)]
-    protected int m_health = 100;
+    [Range(0, 10000)]
+    protected int m_HP = StatHP;
 
     [SerializeField]
     private RectTransform healthbar;
+
+    [SerializeField]
+    [Range(-1000, 2000)]
+    public int initiative = 0;
+
+    
 
     [SerializeField]
     protected BaseUnit target;
@@ -65,18 +95,32 @@ public class BaseUnit : MonoBehaviour
 
     void Update()
     {
-        healthbar.sizeDelta = new Vector2(m_health * 4.9f, 30.0f);
+        healthbar.sizeDelta = new Vector2(m_HP * 4.9f, 30.0f);
     }
 
     public void RecieveDamage(int damage)
     {
         feedbackText.text += "\n The target took " + damage + " dmg";
 
-        m_health -= damage;
+        m_HP -= damage;
 
     }
 
     [SerializeField]
-    protected abilities[] abilitie;
+    protected abilities[] ability;
+
+
+
+    combatMenu()
+    {
+        initiative -= 1000;
+    }
+
+
+
+    waitCommand()
+    {
+        initiative = 1000;
+    }
 
 }

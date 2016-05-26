@@ -5,6 +5,8 @@ public class PartyMemberScript : BaseUnit{
     [SerializeField]
     UnityEngine.UI.Text[] actionButtons;
 
+    bool alive = true;
+
     void Awake()
     {
         for (int i = 0; i < actionButtons.Length; i++)
@@ -12,6 +14,14 @@ public class PartyMemberScript : BaseUnit{
             //actionButtons[i].text = ability[i].attack_name;
         }
 
+        if (m_HP == 0)
+        {
+            alive = false;
+        }
+        else
+        {
+            alive = true;
+        }
     }
 
     public void PerformAttack(int attackNumber)
@@ -21,5 +31,6 @@ public class PartyMemberScript : BaseUnit{
 
     }
 
+    
 
 }
