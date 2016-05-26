@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-using namespace std;
+//Commented the following line. using namespace std is C++ and not C# ??
+//using namespace std;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,10 +31,10 @@ public class GameManager : MonoBehaviour
                     GameObject sadf;
                     //selectMostInitPawn;
                     foreach (GameObject unit in objList)
-                        {
+                    {
                         int i = unit.GetComponent<BaseUnit>().initiative;
 
-                        if(i > highestNr)
+                        if (i > highestNr)
                         {
                             highestNr = i;
                             sadf = unit;
@@ -43,7 +44,7 @@ public class GameManager : MonoBehaviour
                     }
 
 
-                    
+
                     If(menumode == false)
                     {
                         sadf = sadf - 1000;
@@ -54,11 +55,13 @@ public class GameManager : MonoBehaviour
                     break;
                 }
             }
-            if(numEnemies == 0){
+            if (numEnemies == 0)
+            {
                 combatResult = victory;
                 break;
             }
-            if(numAliveAllies == 0){
+            if (numAliveAllies == 0)
+            {
                 combatResult = defeat;
                 break;
             }

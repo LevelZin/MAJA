@@ -20,7 +20,7 @@ public class BaseUnit : MonoBehaviour
     {
         initiative += StatSpd;
 
-        if (initiative<=1000)
+        if (initiative <= 1000)
         {
             cReady = true;
         }
@@ -39,43 +39,43 @@ public class BaseUnit : MonoBehaviour
     [Range(-1000, 2000)]
     public int initiative = 0;
 
-    
+
 
     [SerializeField]
     protected BaseUnit target;
 
-        //Resistances and Weaknesses
-        [SerializeField]
-        [Range(-5, 5)]
-        protected float SlashVulnerability = 1;
+    //Resistances and Weaknesses
+    [SerializeField]
+    [Range(-5, 5)]
+    protected float SlashVulnerability = 1;
 
-        [SerializeField]
-        [Range(-5, 5)]
-        protected float BashVulnerability = 1;
-    
-        [SerializeField]
-        [Range(-5, 5)]
-        protected float FireVulnerability = 1;
-    
-        [SerializeField]
-        [Range(-5, 5)]
-        protected float IceVulnerability = 1;
+    [SerializeField]
+    [Range(-5, 5)]
+    protected float BashVulnerability = 1;
 
-        [SerializeField]
-        [Range(-5, 5)]
-        protected float ThunderVulnerability = 1;
+    [SerializeField]
+    [Range(-5, 5)]
+    protected float FireVulnerability = 1;
 
-        [SerializeField]
-        [Range(-5, 5)]
-        protected float EarthVulnerability = 1;
+    [SerializeField]
+    [Range(-5, 5)]
+    protected float IceVulnerability = 1;
 
-        [SerializeField]
-        [Range(-5, 5)]
-        protected float ForceVulnerability = 1;
+    [SerializeField]
+    [Range(-5, 5)]
+    protected float ThunderVulnerability = 1;
 
-        [SerializeField]
-        [Range(-5, 5)]
-        protected float MysticVulnerability = 1;
+    [SerializeField]
+    [Range(-5, 5)]
+    protected float EarthVulnerability = 1;
+
+    [SerializeField]
+    [Range(-5, 5)]
+    protected float ForceVulnerability = 1;
+
+    [SerializeField]
+    [Range(-5, 5)]
+    protected float MysticVulnerability = 1;
 
 
 
@@ -111,14 +111,14 @@ public class BaseUnit : MonoBehaviour
 
 
 
-    combatMenu()
+        combatMenu()
     {
         initiative -= 1000;
     }
 
 
 
-    waitCommand()
+        waitCommand()
     {
         initiative = 1000;
     }
