@@ -8,11 +8,29 @@ using System.Collections;
 
 public class BaseUnit : MonoBehaviour
 {
-    int StatHP;
-    int StatSP;
-    int StatPow;
-    int StatRes;
-    int StatSpd;
+
+    //Stats
+    [SerializeField]
+    [Range(0, 9999)]
+    protected int StatHP;
+
+    [SerializeField]
+    [Range(0, 9999)]
+    protected int StatSP;
+
+    [SerializeField]
+    [Range(0, 999)]
+    protected int StatPow;
+
+    [SerializeField]
+    [Range(0, 999)]
+    protected int StatRes;
+
+    [SerializeField]
+    [Range(0, 999)]
+    protected int StatSpd;
+
+
     public static bool cReady = false;
 
 
@@ -27,10 +45,27 @@ public class BaseUnit : MonoBehaviour
 
 
     }
+    
+    
+    [SerializeField]
+    [Range(0, 9999)]
+    protected int m_HP;
+    public int HP
+    {
+        get { return m_HP; }
+        set { m_HP = Mathf.Clamp(value, 0, StatHP); }
+    }
 
     [SerializeField]
-    [Range(0, 10000)]
-    protected int m_HP = StatHP;
+    [Range(0, 9999)]
+    protected int m_SP;
+    public int SP
+    {
+        get { return m_SP; }
+        set { m_SP = Mathf.Clamp(value, 0, StatSP); }
+    }
+
+
 
     [SerializeField]
     private RectTransform healthbar;
@@ -92,7 +127,13 @@ public class BaseUnit : MonoBehaviour
     [SerializeField]
     UnityEngine.UI.Text feedbackText;
 
+    void Start()
+    {
 
+
+        m_HP = StatHP;
+        m_SP = StatSP;
+    }
     void Update()
     {
         healthbar.sizeDelta = new Vector2(m_HP * 4.9f, 30.0f);
@@ -111,16 +152,19 @@ public class BaseUnit : MonoBehaviour
 
 
 
-        combatMenu()
+    public void combatMenu()
     {
+
         initiative -= 1000;
+        return;
     }
 
 
 
-        waitCommand()
+    public void waitCommand()
     {
-        initiative = 1000;
+        initiative = 1000+StatSpd;
+        return;
     }
 
 }

@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     bool attackDone = false;
     bool menumode = false;
     [SerializeField]
-    public GameObject[] objList;
+    public BaseUnit[] objList;
 
     [SerializeField]
     EnemyStats enemy;
@@ -28,33 +28,28 @@ public class GameManager : MonoBehaviour
                 if (BaseUnit.cReady == true)
                 {
                     int highestNr = 0;
-                    GameObject sadf;
+                    int highestNrIndex = 0;
                     //selectMostInitPawn;
-                    foreach (GameObject unit in objList)
+                    for(int i=0;i<objList.Length;i++)
                     {
-                        int i = unit.GetComponent<BaseUnit>().initiative;
+                        int j = objList[i].initiative;
 
-                        if (i > highestNr)
+                        if (j > highestNr)
                         {
-                            highestNr = i;
-                            sadf = unit;
+                            highestNr = j;
+                            highestNrIndex = i;
                         }
-
-                        sadf.GetComponent<combatMenu>();
                     }
 
-
-
-                    If(menumode == false)
-                    {
-                        sadf = sadf - 1000;
-                    }
+                    objList[highestNrIndex].combatMenu();
+                    
                 }
                 else
                 {
                     break;
                 }
             }
+            /*
             if (numEnemies == 0)
             {
                 combatResult = victory;
@@ -67,6 +62,7 @@ public class GameManager : MonoBehaviour
             }
             allpawn.selectedPawnInit = allpawn.selectedPawnInit + pawnStatSpeed;
             tickAll();
+            */
         }
 
 
