@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-//Commented the following line. using namespace std is C++ and not C# ??
-//using namespace std;
 
 public class GameManager : MonoBehaviour
 {

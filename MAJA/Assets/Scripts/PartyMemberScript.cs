@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PartyMemberScript : BaseUnit{
+public class PartyMemberScript : BaseUnit
+{
     [SerializeField]
     UnityEngine.UI.Text[] actionButtons;
 
