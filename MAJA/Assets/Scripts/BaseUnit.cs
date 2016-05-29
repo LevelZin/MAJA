@@ -70,6 +70,10 @@ public class BaseUnit : MonoBehaviour
     [SerializeField]
     private RectTransform healthbar;
 
+    //Added by Maria
+    [SerializeField]
+    private RectTransform spellbar;
+
     [SerializeField]
     [Range(-1000, 2000)]
     public int initiative = 0;
@@ -136,7 +140,10 @@ public class BaseUnit : MonoBehaviour
     }
     void Update()
     {
-        healthbar.sizeDelta = new Vector2(m_HP * 4.9f, 30.0f);
+        healthbar.sizeDelta = new Vector2(m_HP * 6.54f, 32.0f);
+
+        //Added by Maria
+        spellbar.sizeDelta = new Vector2(m_SP * 4.86f, 24.0f);
     }
 
     public void RecieveDamage(int damage)
