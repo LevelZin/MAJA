@@ -329,6 +329,56 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11417990, guid: a5228a30f8965584d9cafc4331fb1053, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 11417990, guid: a5228a30f8965584d9cafc4331fb1053, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417990, guid: a5228a30f8965584d9cafc4331fb1053, type: 2}
+      propertyPath: m_Text
+      value: "The world of Esparth is a world of fantasy, of magic and adventure,
+        Heroes and Villains,\r\n\r\nGood versus Evil\u2026 Oh wait, I forgot. It\u2019s
+        not like that anymore.\r\n\r\nMany years ago a new Evil Overlord named Vangul
+        appeared on the Evil Continent, the land\r\n\r\nthat all Evil come from. When
+        the races of the Lands of Goodness and Kindness learned a\r\n\r\nnew Evil
+        Overlord had appeared they trembled in fear. The Evil Overlord Vangul gathered
+        his\r\n\r\nsubjects, minions, and subordinates and declared for all the world:
+        \u201CWe will no longer attack\r\n\r\nthe lands of Good! From now on all Evil
+        creatures will be nice and friendly!\u201D\r\n\r\nAnd all the jaws in the
+        Lands of Goodness and Kindness hanged so far down they touched\r\n\r\nthe
+        ground.\r\n\r\nA week later, after everyone picked their jaws of the ground,
+        the world of Esparth\r\n\r\ncelebrated as the war between Good and Evil, Fluffiness
+        and sliminess, Light and Dark,\u2026 well\r\n\r\nyou get the point\u2026,
+        had ended forever.\r\n\r\nAs the celebration entered its second week a massive
+        object appeared from the sky, it had a\r\n\r\ncircular, disc like, appearance
+        and was made of a strange metal. As the flying disc hovered\r\n\r\nabove the
+        party a bright light started shining on the ship, the light the started slowly\r\n\r\ndescending
+        towards the ground.\r\n\r\nAs the light reached the ground it flashed brightly
+        and disappeared, in its place was a strange\r\n\r\ncreature unlike any other
+        the world of Esparth had ever seen.\r\n\r\n\u201CGreetings people of Esparth!
+        I am Wuolt, a being from another world. Many centuries I have\r\n\r\nwatched
+        your people wage war against each other, but now that you have made peace
+        I\r\n\r\nhave come to offer my technology to help you make this world even
+        more peaceful!\u201D\r\n\r\nAs the partying people heard the Aliens, Wuolt\u2019s,
+        words they cheered so loud that several\r\n\r\nhouses collapsed. Everyone
+        then decided to party for another three months.\r\n\r\nAnd so the world of
+        Esparth became peaceful and the people of the Lands of Goodness and\r\n\r\nKindness,
+        and the creatures of the Evil Continent became the best of friends.\r\n\r\nBut
+        not everyone on Esparth was happy about the Evil creatures doing good or the
+        actions of\r\n\r\nthe Evil Good Overlord Vangul.\r\n\r\nOne of these was the
+        Evil Good Overlord Vangul\u2019s daughter Maja.\r\n\r\nShe couldn\u2019t stand
+        how nice everyone was to each other. The constant politeness infuriated\r\n\r\nher.
+        She felt like puking every time someone tried to become her friend\u2026\r\n\r\nTo
+        put it simply, she hated anything Good, Nice, and Fluffy.\r\n\r\nMaia conspired
+        with the Evil General Girard to overthrow her father and return the world
+        to\r\n\r\nits war-torn state of Good against Evil. But she knew they would
+        not be able to do this on\r\n\r\ntheir own, so she traveled deep into the
+        ancient Tower of Evil Overlords and found the magic\r\n\r\nto summon minions
+        from other worlds.\n\n\n\n\nPress ENTER to start game"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5228a30f8965584d9cafc4331fb1053, type: 2}
   m_IsPrefabParent: 0
