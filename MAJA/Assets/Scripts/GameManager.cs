@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
-    enum turn { player1, player2, player3, player4, enemy1, enemy2, enemy3, enemy4 }
+    enum turn { player, player2, player3, player4, enemy, enemy2, enemy3, enemy4 }
 
     [SerializeField]
     turn currentTurn;
@@ -71,30 +71,32 @@ public class GameManager : MonoBehaviour
 
     }
 
-    /*
-    if (currentTurn == turn.player)
-    {
-        if (attackDone)
+    void FixedUpdate()
+    { 
+        if (currentTurn == turn.player)
         {
-            currentTurn = turn.enemy;
+            Debug.Log("Player Turn.");
+            if (attackDone)
+            {
+                Debug.Log("Enemy Turn.");
+                currentTurn = turn.enemy;
+                attackDone = false;
+            }
+
+        }
+        else
+        {
+            Debug.Log("Enemy is Attacking!");
             attackDone = false;
+            enemy.DoAttack();
+            currentTurn = turn.player;
         }
 
-    }
-    else
-    {
-        attackDone = false;
-        currentTurn = turn.player;
-        enemy.DoAttack();
+        }
 
-    }
-
-    }
-*/
-    public void AttackDone()
-    {
-        attackDone = true;
-
+        public void AttackDone()
+        {
+            attackDone = true;
     }
 }
 

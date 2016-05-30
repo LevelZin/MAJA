@@ -517,8 +517,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTurn: 0
-  objList: []
-  enemy: {fileID: 0}
+  objList:
+  - {fileID: 1973137482}
+  - {fileID: 1081911825}
+  enemy: {fileID: 1973137482}
 --- !u!4 &634163413
 Transform:
   m_ObjectHideFlags: 0
