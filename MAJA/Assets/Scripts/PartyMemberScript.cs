@@ -27,11 +27,10 @@ public class PartyMemberScript : BaseUnit
 
     public void PerformAttack(int attackNumber)
     {
-        //target.RecieveDamage(ability[attackNumber].damage);
+        Debug.Log("Attacking");
+        target.RecieveDamage(ability[attackNumber].damage);
         //GameManager.AttackDone();
 
-    }
-
-    
+    }    
 
 }

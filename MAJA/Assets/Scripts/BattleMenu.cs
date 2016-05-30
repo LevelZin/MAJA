@@ -15,5 +15,4 @@ public class BattleMenu : MonoBehaviour
     {
         
     }
-
 }

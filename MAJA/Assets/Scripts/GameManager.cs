@@ -18,58 +18,56 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        while (true)
-        {
-            while (true)
-            {
-                menumode = true;
-                if (BaseUnit.cReady == true)
-                {
-                    int highestNr = 0;
-                    int highestNrIndex = 0;
-                    //selectMostInitPawn;
-                    for(int i=0;i<objList.Length;i++)
-                    {
-                        int j = objList[i].initiative;
+    //    while (true) //While loop 1
+    //    {
+    //        while (true) //While loop 2
+    //        {
+    //            menumode = true;
+    //            if (BaseUnit.cReady == true)
+    //            {
+    //                int highestNr = 0;
+    //                int highestNrIndex = 0;
+    //                //selectMostInitPawn;
+    //                    for(int i=0;i<objList.Length;i++)
+    //                    {
+    //                        int j = objList[i].initiative;
 
-                        if (j > highestNr)
-                        {
-                            highestNr = j;
-                            highestNrIndex = i;
-                        }
-                    }
+    //                        if (j > highestNr)
+    //                        {
+    //                            highestNr = j;
+    //                            highestNrIndex = i;
+    //                        }
+    //                    }
 
-                    objList[highestNrIndex].combatMenu();
+    //                objList[highestNrIndex].combatMenu();
                     
-                }
-                else
-                {
-                    break;
-                }
-            }
-            /*
-            if (numEnemies == 0)
-            {
-                combatResult = victory;
-                break;
-            }
-            if (numAliveAllies == 0)
-            {
-                combatResult = defeat;
-                break;
-            }
-            allpawn.selectedPawnInit = allpawn.selectedPawnInit + pawnStatSpeed;
-            tickAll();
-            */
-        }
+    //            }
+    //            else
+    //            {
+    //                break; //Break For loop
+    //            }
+    //        } //End of While loop 2
+            
+    //        if (numEnemies == 0)
+    //        {
+    //            combatResult = victory;
+    //            break; //Break While loop
+    //        }
+    //        if (numAliveAllies == 0)
+    //        {
+    //            combatResult = defeat;
+    //            break; //Break While loop
+    //        }
 
+    //        allpawn.selectedPawnInit = allpawn.selectedPawnInit + pawnStatSpeed;
+    //        tickAll();
+            
+    //    }//End of While loop 1
+        
+    //}
 
-
-
-    }
-
-    void tickAll ()
-    {
+    //void tickAll ()
+    //{
 
     }
 
@@ -92,11 +90,11 @@ public class GameManager : MonoBehaviour
     }
 
     }
-
+*/
     public void AttackDone()
     {
         attackDone = true;
 
-    }*/
+    }
 }
 

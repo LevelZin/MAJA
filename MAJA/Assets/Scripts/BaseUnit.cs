@@ -1,14 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
-
-
-
-
 public class BaseUnit : MonoBehaviour
 {
-
     //Stats
     [SerializeField]
     [Range(0, 9999)]
@@ -133,11 +127,10 @@ public class BaseUnit : MonoBehaviour
 
     void Start()
     {
-
-
         m_HP = StatHP;
         m_SP = StatSP;
     }
+
     void Update()
     {
         healthbar.sizeDelta = new Vector2(m_HP * 6.54f, 32.0f);
@@ -148,20 +141,18 @@ public class BaseUnit : MonoBehaviour
 
     public void RecieveDamage(int damage)
     {
-        feedbackText.text += "\n The target took " + damage + " dmg";
-
+        //feedbackText.text += "\n The target took " + damage + " dmg";
+        Debug.Log("The target took: " + damage + " damage");
         m_HP -= damage;
+        Debug.Log("Target has: " + m_HP + " HP");
 
     }
 
     [SerializeField]
     protected abilities[] ability;
 
-
-
     public void combatMenu()
     {
-
         initiative -= 1000;
         return;
     }
