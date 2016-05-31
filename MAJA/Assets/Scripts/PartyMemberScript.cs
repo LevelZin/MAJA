@@ -34,12 +34,7 @@ public class PartyMemberScript : BaseUnit
 
     IEnumerator StartDelay(float duration)
     {
-        Debug.Log("Start Wait() function. The time is: " + Time.time);
-        Debug.Log("Float duration = " + duration);
-        yield return new WaitForSeconds(duration);   //Wait
-        Debug.Log("End Wait() function and the time is: " + Time.time);
-
-
+        yield return new WaitForSeconds(duration);   //Wait        
     }
 
 }

@@ -184,4 +184,8 @@ public class BaseUnit : MonoBehaviour
         GameObject.Destroy(Enemy);
     }
 
+    IEnumerator StartDelay(float duration)
+    {
+        yield return new WaitForSeconds(duration);   //Wait        
+    }
 }
