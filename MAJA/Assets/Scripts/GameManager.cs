@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
             battleCanvas.GetComponent<Canvas>().enabled = false;
             Debug.Log("Enemy is Attacking!");
             attackDone = false;
-            StartCoroutine(StartDelay(5.0f));
+            StartCoroutine(StartDelay(2.0f));
             currentTurn = turn.player;
         }
 
