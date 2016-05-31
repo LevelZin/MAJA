@@ -664,7 +664,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     startLifetime:
-      scalar: 5
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -699,7 +699,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startSpeed:
-      scalar: 5
+      scalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -976,7 +976,7 @@ ParticleSystem:
     enabled: 1
     type: 4
     radius: 1
-    angle: 10
+    angle: 3
     length: 5
     boxX: 1
     boxY: 1
