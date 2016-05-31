@@ -16,8 +16,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     EnemyStats enemy;
 
-    void Update()
-    {
+    [SerializeField]
+    float delay;
+
+    //void Update()
+    //{
     //    while (true) //While loop 1
     //    {
     //        while (true) //While loop 2
@@ -69,13 +72,13 @@ public class GameManager : MonoBehaviour
     //void tickAll ()
     //{
 
-    }
+    //}
 
-    void FixedUpdate()
-    { 
+    void Update()
+    {
+        
         if (currentTurn == turn.player)
         {
-            Debug.Log("Player Turn.");
             if (attackDone)
             {
                 Debug.Log("Enemy Turn.");
@@ -86,17 +89,28 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+
             Debug.Log("Enemy is Attacking!");
             attackDone = false;
             enemy.DoAttack();
             currentTurn = turn.player;
         }
 
-        }
-
-        public void AttackDone()
-        {
-            attackDone = true;
     }
+
+    public void AttackDone()
+    {
+        attackDone = true;
+    }
+
+    IEnumerator StartDelay(float duration)
+    {
+        duration = delay;
+        Debug.Log("Start Wait() function. The time is: " + Time.time);
+        Debug.Log("Float duration = " + duration);
+        yield return new WaitForSeconds(duration);   //Wait
+        Debug.Log("End Wait() function and the time is: " + Time.time);
+    }
+
 }
 

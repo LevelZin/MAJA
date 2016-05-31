@@ -30,7 +30,16 @@ public class PartyMemberScript : BaseUnit
         Debug.Log("Attacking");
         target.RecieveDamage(ability[attackNumber].damage);
         gameManager.AttackDone();
+    }
 
-    }    
+    IEnumerator StartDelay(float duration)
+    {
+        Debug.Log("Start Wait() function. The time is: " + Time.time);
+        Debug.Log("Float duration = " + duration);
+        yield return new WaitForSeconds(duration);   //Wait
+        Debug.Log("End Wait() function and the time is: " + Time.time);
+
+
+    }
 
 }
