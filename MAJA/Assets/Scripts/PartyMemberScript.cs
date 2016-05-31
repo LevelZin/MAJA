@@ -29,7 +29,7 @@ public class PartyMemberScript : BaseUnit
     {
         Debug.Log("Attacking");
         target.RecieveDamage(ability[attackNumber].damage);
-        //GameManager.AttackDone();
+        gameManager.AttackDone();
 
     }    
 

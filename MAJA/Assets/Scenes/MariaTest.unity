@@ -517,8 +517,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTurn: 0
-  objList: []
-  enemy: {fileID: 0}
+  objList:
+  - {fileID: 1973137482}
+  - {fileID: 1081911825}
+  enemy: {fileID: 1973137482}
 --- !u!4 &634163413
 Transform:
   m_ObjectHideFlags: 0
@@ -918,7 +920,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 743.4, y: -293.9}
+  m_AnchoredPosition: {x: 826, y: -239}
   m_SizeDelta: {x: 486, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1057029724
@@ -975,6 +977,7 @@ MonoBehaviour:
   StatPow: 5
   StatRes: 5
   StatSpd: 5
+  Enemy: {fileID: 0}
   m_HP: 100
   m_SP: 5
   healthbar: {fileID: 83474237}
@@ -993,7 +996,7 @@ MonoBehaviour:
   feedbackText: {fileID: 0}
   ability:
   - attack_name: Attack
-    damage: 5
+    damage: 10
   - attack_name: Skill
     damage: 1
   - attack_name: Meditate
@@ -1385,7 +1388,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 667.39996, y: -265.34}
+  m_AnchoredPosition: {x: 827, y: -210}
   m_SizeDelta: {x: 654, y: 32}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1198911160
@@ -2092,12 +2095,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecc064b56b7fc54f8e6ef71979781eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatHP: 10
+  StatHP: 100
   StatSP: 0
   StatPow: 0
   StatRes: 0
   StatSpd: 0
-  m_HP: 10
+  Enemy: {fileID: 1973137477}
+  m_HP: 100
   m_SP: 0
   healthbar: {fileID: 1198911159}
   spellbar: {fileID: 1057029723}
@@ -2115,15 +2119,15 @@ MonoBehaviour:
   feedbackText: {fileID: 0}
   ability:
   - attack_name: Attack
-    damage: 0
+    damage: 10
   - attack_name: Skill
-    damage: 1
+    damage: 10
   - attack_name: Meditate
-    damage: 2
+    damage: 10
   - attack_name: Wait
-    damage: 3
+    damage: 10
   - attack_name: Flee
-    damage: 4
+    damage: 10
 --- !u!1 &2087437557
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,10 @@ public class BaseUnit : MonoBehaviour
     [Range(0, 999)]
     protected int StatSpd;
 
+    //Added by Maria
+    [SerializeField]
+    public GameObject Enemy;
+
 
     public static bool cReady = false;
 
@@ -134,9 +138,19 @@ public class BaseUnit : MonoBehaviour
     void Update()
     {
         healthbar.sizeDelta = new Vector2(m_HP * 6.54f, 32.0f);
-
         //Added by Maria
         spellbar.sizeDelta = new Vector2(m_SP * 4.86f, 24.0f);
+
+        //Added by Maria
+        if(m_HP <= 0)
+        {
+            die();
+        }
+    }
+
+    void FixedUpdate()
+    {
+        
     }
 
     public void RecieveDamage(int damage)
@@ -157,12 +171,17 @@ public class BaseUnit : MonoBehaviour
         return;
     }
 
-
-
     public void waitCommand()
     {
         initiative = 1000+StatSpd;
         return;
+    }
+
+    //Added by Maria
+    public void die()
+    {
+        Debug.Log("Target died.");
+        GameObject.Destroy(Enemy);
     }
 
 }
