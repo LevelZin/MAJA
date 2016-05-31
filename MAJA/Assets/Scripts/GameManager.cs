@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject battleCanvas;
 
+    void Start()
+    {
+        battleCanvas.GetComponent<Canvas>().enabled = true;
+    }
+
     //void Update()
     //{
     //    while (true) //While loop 1
@@ -82,11 +87,9 @@ public class GameManager : MonoBehaviour
         
         if (currentTurn == turn.player)
         {
-            battleCanvas.GetComponent<Canvas>().enabled = true;
             if (attackDone)
             {
                 Debug.Log("Enemy Turn.");
-                battleCanvas.GetComponent<Canvas>().enabled = false;
                 currentTurn = turn.enemy;
                 attackDone = false;
             }
@@ -94,10 +97,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-
+            battleCanvas.GetComponent<Canvas>().enabled = false;
             Debug.Log("Enemy is Attacking!");
             attackDone = false;
-            enemy.DoAttack();
+            StartCoroutine(StartDelay(5.0f));
             currentTurn = turn.player;
         }
 
@@ -112,7 +115,8 @@ public class GameManager : MonoBehaviour
     {
         duration = delay;
         yield return new WaitForSeconds(duration);   //Wait
-        
+        enemy.DoAttack();
+        battleCanvas.GetComponent<Canvas>().enabled = true;
     }
 
 }
