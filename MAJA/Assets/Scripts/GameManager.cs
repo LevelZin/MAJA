@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     float delay;
 
+    [SerializeField]
+    GameObject battleCanvas;
+
     //void Update()
     //{
     //    while (true) //While loop 1
@@ -79,9 +82,11 @@ public class GameManager : MonoBehaviour
         
         if (currentTurn == turn.player)
         {
+            battleCanvas.GetComponent<Canvas>().enabled = true;
             if (attackDone)
             {
                 Debug.Log("Enemy Turn.");
+                battleCanvas.GetComponent<Canvas>().enabled = false;
                 currentTurn = turn.enemy;
                 attackDone = false;
             }
@@ -106,10 +111,8 @@ public class GameManager : MonoBehaviour
     IEnumerator StartDelay(float duration)
     {
         duration = delay;
-        Debug.Log("Start Wait() function. The time is: " + Time.time);
-        Debug.Log("Float duration = " + duration);
         yield return new WaitForSeconds(duration);   //Wait
-        Debug.Log("End Wait() function and the time is: " + Time.time);
+        
     }
 
 }
