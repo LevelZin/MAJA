@@ -10,18 +10,22 @@ public class Morty_Dialouge : MonoBehaviour {
 
     void OnGUI()
     {
-        GUILayout.BeginArea(new Rect(700, 600, 400, 400));
+        GUILayout.BeginArea(new Rect(700, 600, 400, 400));  // Location of the GUI
+        if (DisplayDialouge && !FinishedTalk)
+        {
+            GUILayout.Label(Morty[0]);
+        }
 
     }
 
     void OnTriggerEnter()   // When Player enters the trigger
     {
-
+        DisplayDialouge = true;
     }
 
     void OnTriggerExit()    // When Player leaves the trigger
     {
-
+        DisplayDialouge = false;
     }
 	
 }
