@@ -39,29 +39,41 @@ public class PartyMemberScript : BaseUnit
         {
             target.RecieveDamage(ability[1].damage);
             Debug.Log("Casts skill");
+            gameManager.AttackDone();
         }
         else if (attackNumber == 2)
         {
-            player.RecieveDamage(ability[2].damage);
-            Debug.Log("Healing");
+            if (player.HP < 70)
+            {
+                player.RecieveDamage(ability[2].damage);
+                Debug.Log("Healing");
+                gameManager.AttackDone();
+            }
+            else if (player.HP > 70 && player.HP < 100)
+            {
+                player.HP = 100;
+                Debug.Log("Healing");
+                gameManager.AttackDone();
+            }
+            else
+            {
+                Debug.Log("Health already at maximum!");
+                gameManager.AttackDone();
+            }
         }
         else if (attackNumber == 3)
         {
-            target.RecieveDamage(ability[3].damage);
             Debug.Log("Wait");
+            gameManager.AttackDone();
         }
         else
         {
-            StartCoroutine(StartDelayFlee(5));
+            gameManager.AttackDone();
             Debug.Log("Flee");
+            StartCoroutine(StartDelayFlee(5));
         }
     }
-
-    public void OnClick()
-    {
-
-    }
-
+    
     IEnumerator StartDelayFlee(float duration)
     {
         yield return new WaitForSeconds(duration);   //Wait
