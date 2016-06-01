@@ -28,6 +28,9 @@ public class BaseUnit : MonoBehaviour
     [SerializeField]
     public GameObject Enemy;
 
+    [SerializeField]
+    protected BaseUnit player;
+
 
     public static bool cReady = false;
 
@@ -46,7 +49,7 @@ public class BaseUnit : MonoBehaviour
     
     
     [SerializeField]
-    [Range(0, 9999)]
+    [Range(0, 100)]
     protected int m_HP;
     public int HP
     {
