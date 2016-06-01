@@ -28,6 +28,9 @@ public class BaseUnit : MonoBehaviour
     [SerializeField]
     public GameObject Enemy;
 
+    [SerializeField]
+    protected BaseUnit player;
+
 
     public static bool cReady = false;
 

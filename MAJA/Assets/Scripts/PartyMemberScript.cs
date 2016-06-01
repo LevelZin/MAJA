@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PartyMemberScript : BaseUnit
 {
     [SerializeField]
     UnityEngine.UI.Text[] actionButtons;
+    int[] attackNumber;
 
     bool alive = true;
 
@@ -30,23 +32,27 @@ public class PartyMemberScript : BaseUnit
         if (attackNumber == 0)
         {
             Debug.Log("Attacking");
-            target.RecieveDamage(ability[attackNumber].damage);
+            target.RecieveDamage(ability[0].damage);
             gameManager.AttackDone();
         }
-        else if(attackNumber == 1)
+        else if (attackNumber == 1)
         {
+            target.RecieveDamage(ability[1].damage);
             Debug.Log("Casts skill");
         }
         else if (attackNumber == 2)
         {
+            player.RecieveDamage(ability[2].damage);
             Debug.Log("Healing");
         }
         else if (attackNumber == 3)
         {
+            target.RecieveDamage(ability[3].damage);
             Debug.Log("Wait");
         }
         else
         {
+            StartCoroutine(StartDelayFlee(5));
             Debug.Log("Flee");
         }
     }
@@ -56,9 +62,10 @@ public class PartyMemberScript : BaseUnit
 
     }
 
-    IEnumerator StartDelay(float duration)
+    IEnumerator StartDelayFlee(float duration)
     {
-        yield return new WaitForSeconds(duration);   //Wait        
+        yield return new WaitForSeconds(duration);   //Wait
+        //SceneManager.LoadScene(Enter index of main level here);
     }
 
 }

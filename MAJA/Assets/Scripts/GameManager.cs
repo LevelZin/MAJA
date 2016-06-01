@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
         
         if (currentTurn == turn.player)
         {
+            //Debug.Log("Player Turn.");
             if (attackDone)
             {
                 Debug.Log("Enemy Turn.");
