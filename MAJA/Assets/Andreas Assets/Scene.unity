@@ -4169,8 +4169,12 @@ Prefab:
     m_TransformParent: {fileID: 202122699}
     m_Modifications:
     - target: {fileID: 11498862, guid: a121695aa1c2dc84fa65533573a8b1a7, type: 2}
+      propertyPath: Morty.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498862, guid: a121695aa1c2dc84fa65533573a8b1a7, type: 2}
       propertyPath: Player.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 485300, guid: a121695aa1c2dc84fa65533573a8b1a7, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4215,6 +4219,38 @@ Prefab:
     - target: {fileID: 6587106, guid: a121695aa1c2dc84fa65533573a8b1a7, type: 2}
       propertyPath: m_Size.y
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498862, guid: a121695aa1c2dc84fa65533573a8b1a7, type: 2}
+      propertyPath: Morty.Array.data[0]
+      value: Hi there!
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498862, guid: a121695aa1c2dc84fa65533573a8b1a7, type: 2}
+      propertyPath: Player.Array.data[0]
+      value: What the! Who are the hell you!?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498862, guid: a121695aa1c2dc84fa65533573a8b1a7, type: 2}
+      propertyPath: Morty.Array.data[1]
+      value: I'm Morty. Say could you do me a tiny favor and release me?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498862, guid: a121695aa1c2dc84fa65533573a8b1a7, type: 2}
+      propertyPath: Player.Array.data[1]
+      value: Why are you even chained up here?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498862, guid: a121695aa1c2dc84fa65533573a8b1a7, type: 2}
+      propertyPath: Morty.Array.data[2]
+      value: "Well I kinda spilled some coff\xE9 on the Overlord a few centuries ago."
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498862, guid: a121695aa1c2dc84fa65533573a8b1a7, type: 2}
+      propertyPath: Player.Array.data[2]
+      value: '...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498862, guid: a121695aa1c2dc84fa65533573a8b1a7, type: 2}
+      propertyPath: Morty.Array.data[3]
+      value: "It was just a cup of Coff\xE9!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498862, guid: a121695aa1c2dc84fa65533573a8b1a7, type: 2}
+      propertyPath: Player.Array.data[3]
+      value: Annoying.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a121695aa1c2dc84fa65533573a8b1a7, type: 2}
