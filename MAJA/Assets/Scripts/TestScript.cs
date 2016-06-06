@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class TestScript : MonoBehaviour {
 
@@ -9,7 +10,15 @@ public class TestScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
-	}
+	void Update ()
+    {
+
+        if (Input.GetButtonDown("Submit"))
+        {
+
+            SceneManager.LoadScene(0);
+
+        }
+
+    }
 }
