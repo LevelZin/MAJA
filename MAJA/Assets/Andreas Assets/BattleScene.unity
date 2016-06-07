@@ -551,6 +551,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11467896, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: weapons.Array.data[0].models.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 456622, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.51
@@ -638,6 +642,106 @@ Prefab:
     - target: {fileID: 11421668, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
       propertyPath: m_HP
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467896, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467896, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: weapons.Array.data[0].models.Array.data[0]
+      value: 
+      objectReference: {fileID: 1550534311}
+    - target: {fileID: 13739732, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13734382, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13778778, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13780434, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13712874, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700894, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13757530, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13785320, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13762182, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13773186, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13784236, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13789102, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13790664, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492064, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2367136, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303796, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2352340, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305316, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342448, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13724864, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13778848, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13733570, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13714390, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 790e5c575e5cfaa44ad3106e853c13ff, type: 2}
@@ -885,6 +989,11 @@ MonoBehaviour:
     damage: 10
   - attack_name: Skill
     damage: 20
+--- !u!23 &1550534311 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2367136, guid: 790e5c575e5cfaa44ad3106e853c13ff,
+    type: 2}
+  m_PrefabInternal: {fileID: 1093264814}
 --- !u!1001 &1565843795
 Prefab:
   m_ObjectHideFlags: 0
