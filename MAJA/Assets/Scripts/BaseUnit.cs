@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class BaseUnit : MonoBehaviour
 {
@@ -26,15 +27,17 @@ public class BaseUnit : MonoBehaviour
 
     //Added by Maria
     [SerializeField]
-    public GameObject Enemy;
+    protected GameObject Enemy;
 
     [SerializeField]
     protected BaseUnit player;
 
-    public static bool flee = false;
+    public bool flee = false;
 
     public static bool cReady = false;
 
+    [SerializeField]
+    protected float duration;
 
     public virtual void tick()
     {
@@ -146,9 +149,9 @@ public class BaseUnit : MonoBehaviour
         spellbar.sizeDelta = new Vector2(m_SP * 4.86f, 24.0f);
 
         //Added by Maria
-        if(m_HP <= 0)
+        if(HP <= 0)
         {
-            die();
+            EnemyDie();
         }
     }
 
@@ -182,14 +185,22 @@ public class BaseUnit : MonoBehaviour
     }
 
     //Added by Maria
-    public void die()
+    public void EnemyDie()
     {
-        Debug.Log("Target died.");
+        Debug.Log("Enemy died.");
         GameObject.Destroy(Enemy);
+        StartCoroutine(StartDelay(duration));
+    }
+
+    public void PlayerDie()
+    {
+        Debug.Log("Player died.");
+        GameObject.Destroy(player);
     }
 
     IEnumerator StartDelay(float duration)
     {
-        yield return new WaitForSeconds(duration);   //Wait        
+        yield return new WaitForSeconds(duration);   //Wait
+        SceneManager.LoadScene(0); 
     }
 }

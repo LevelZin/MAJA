@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
-    enum turn { player, player2, player3, player4, enemy, enemy2, enemy3, enemy4 }
+    enum turn { player, enemy, none }
 
     [SerializeField]
     turn currentTurn;
@@ -96,6 +96,10 @@ public class GameManager : MonoBehaviour
             }
 
         }
+        //else if (flee == true)
+        //{
+        //    currentTurn == turn.none;
+        //}
         else
         {
             battleCanvas.GetComponent<Canvas>().enabled = false;

@@ -8,6 +8,9 @@ public class PartyMemberScript : BaseUnit
     UnityEngine.UI.Text[] actionButtons;
     int[] attackNumber;
 
+    [SerializeField]
+    GameObject battleCanvas;
+
     bool alive = true;
 
     void Awake()
@@ -24,6 +27,14 @@ public class PartyMemberScript : BaseUnit
         else
         {
             alive = true;
+        }
+    }
+
+    void update()
+    {
+        if(HP <= 0)
+        {
+            PlayerDie();
         }
     }
 
@@ -68,7 +79,9 @@ public class PartyMemberScript : BaseUnit
         }
         else
         {
-            gameManager.AttackDone();
+            flee = true;
+            battleCanvas.GetComponent<Canvas>().enabled = false;
+            //gameManager.AttackDone();
             Debug.Log("Flee");
             StartCoroutine(StartDelayFlee(3));
         }
@@ -76,7 +89,6 @@ public class PartyMemberScript : BaseUnit
     
     IEnumerator StartDelayFlee(float duration)
     {
-        flee = true;
         yield return new WaitForSeconds(duration);   //Wait
         SceneManager.LoadScene(0);
     }
