@@ -31,6 +31,7 @@ public class BaseUnit : MonoBehaviour
     [SerializeField]
     protected BaseUnit player;
 
+    public static bool flee = false;
 
     public static bool cReady = false;
 

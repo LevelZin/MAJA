@@ -70,14 +70,15 @@ public class PartyMemberScript : BaseUnit
         {
             gameManager.AttackDone();
             Debug.Log("Flee");
-            StartCoroutine(StartDelayFlee(5));
+            StartCoroutine(StartDelayFlee(3));
         }
     }
     
     IEnumerator StartDelayFlee(float duration)
     {
+        flee = true;
         yield return new WaitForSeconds(duration);   //Wait
-        //SceneManager.LoadScene(Enter index of main level here);
+        SceneManager.LoadScene(0);
     }
 
 }
