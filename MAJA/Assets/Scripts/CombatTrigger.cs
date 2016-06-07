@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class CombatTrigger : MonoBehaviour {
 
     public string[] Player;
@@ -9,6 +11,10 @@ public class CombatTrigger : MonoBehaviour {
     bool DisplayDialouge = false;
     bool Greetings = false;
     bool FinishedTalk = false;
+
+    [SerializeField]
+    protected AudioClip mjau;
+    AudioSource audio;
 
     void OnGUI()
     {
@@ -25,8 +31,8 @@ public class CombatTrigger : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-	
-	}
+        audio = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -36,6 +42,7 @@ public class CombatTrigger : MonoBehaviour {
 
     void OnTriggerEnter()
     {
+        audio.PlayOneShot(mjau, 0.1F);
         DisplayDialouge = true;
         StartCoroutine(StartDelay());
     }

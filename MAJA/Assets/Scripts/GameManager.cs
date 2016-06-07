@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class GameManager : MonoBehaviour
 {
     enum turn { player, enemy, none }
@@ -22,8 +24,13 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject battleCanvas;
 
+    [SerializeField]
+    protected AudioClip mjau;
+    AudioSource audio;
+
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         battleCanvas.GetComponent<Canvas>().enabled = true;
     }
 
@@ -90,6 +97,7 @@ public class GameManager : MonoBehaviour
             //Debug.Log("Player Turn.");
             if (attackDone)
             {
+                GetComponent<AudioSource>().PlayOneShot(mjau, 0.6F);
                 Debug.Log("Enemy Turn.");
                 currentTurn = turn.enemy;
                 attackDone = false;
