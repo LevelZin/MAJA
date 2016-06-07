@@ -189,8 +189,8 @@ public class BaseUnit : MonoBehaviour
     public void EnemyDie()
     {
         Debug.Log("Enemy died.");
-        GameObject.Destroy(Enemy);
-        StartCoroutine(StartDelayEnemy(duration));
+        
+        StartCoroutine(StartDelayEnemy(3));
     }
 
     public void PlayerDie()
@@ -211,9 +211,9 @@ public class BaseUnit : MonoBehaviour
         Maja.SetTrigger("Maja death");
 
         yield return new WaitForSeconds(duration);   //Wait
-        
+        SceneManager.LoadScene(2);
         GameObject.Destroy(Player);
-        SceneManager.LoadScene(0);        
+                
     }
 
     IEnumerator StartDelayEnemy(float duration)
@@ -221,9 +221,9 @@ public class BaseUnit : MonoBehaviour
         //Enemy die animations here!
 
         yield return new WaitForSeconds(duration);   //Wait
-
+        SceneManager.LoadScene(2);
         GameObject.Destroy(Enemy);
-        SceneManager.LoadScene(0);
+        
     }
 
 }

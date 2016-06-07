@@ -54,6 +54,7 @@ public class PartyMemberScript : BaseUnit
         else if (attackNumber == 1)
         {
             target.RecieveDamage(ability[1].damage);
+            player.SP -= 20;
             Debug.Log("Casts skill");
             gameManager.AttackDone();
         }
@@ -61,12 +62,14 @@ public class PartyMemberScript : BaseUnit
         {
             if (player.HP < 70)
             {
+                player.SP -= 10;
                 player.RecieveDamage(ability[2].damage);
                 Debug.Log("Healing");
                 gameManager.AttackDone();
             }
             else if (player.HP > 70 && player.HP < 100)
             {
+                player.SP -= 10;
                 player.HP = 100;
                 Debug.Log("Healing");
                 gameManager.AttackDone();
