@@ -190,7 +190,7 @@ public class BaseUnit : MonoBehaviour
     {
         Debug.Log("Enemy died.");
         GameObject.Destroy(Enemy);
-        StartCoroutine(StartDelay(duration));
+        StartCoroutine(StartDelayEnemy(duration));
     }
 
     public void PlayerDie()
@@ -201,18 +201,29 @@ public class BaseUnit : MonoBehaviour
         player.StatHP = 0;
         Debug.Log("Player died.");
 
-        StartCoroutine(StartDelay(3));
+        StartCoroutine(StartDelayMaja(3));
         
     }
 
-    IEnumerator StartDelay(float duration)
+    IEnumerator StartDelayMaja(float duration)
     {
         Animator Maja = GetComponent<Animator>();
         Maja.SetTrigger("Maja death");
+
         yield return new WaitForSeconds(duration);   //Wait
         
-        //GameObject.Destroy(Player);
+        GameObject.Destroy(Player);
         SceneManager.LoadScene(0);        
+    }
+
+    IEnumerator StartDelayEnemy(float duration)
+    {
+        //Enemy die animations here!
+
+        yield return new WaitForSeconds(duration);   //Wait
+
+        GameObject.Destroy(Enemy);
+        SceneManager.LoadScene(0);
     }
 
 }
