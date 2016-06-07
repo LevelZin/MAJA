@@ -1828,6 +1828,36 @@ Transform:
   - {fileID: 1585235065}
   m_Father: {fileID: 81556407}
   m_RootOrder: 0
+--- !u!1 &530259389 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 155868, guid: e1acf737d1898f74a85c17f0c8dd0a93, type: 2}
+  m_PrefabInternal: {fileID: 502061568}
+--- !u!114 &530259391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 530259389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfc431e089780b4c986c45b00b8e388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player:
+  - Ahhhrg! Kittens!! Out of my way you disguisting creatures!
+  dialougeState: 0
+--- !u!65 &530259392
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 530259389}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.4724736, y: 5.3254013, z: 4.7369103}
+  m_Center: {x: -0.16706046, y: 2.1627018, z: -1.8691121}
 --- !u!1001 &543100096
 Prefab:
   m_ObjectHideFlags: 0
@@ -4034,10 +4064,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1147707539}
-  m_LocalRotation: {x: 0.5813062, y: 0, z: -7.1054274e-15, w: 0.8136849}
-  m_LocalPosition: {x: 1.71, y: 17.53, z: -3.33}
+  m_LocalRotation: {x: 0.55649656, y: -2.14338e-16, z: -7.1021934e-15, w: 0.83084995}
+  m_LocalPosition: {x: 0.73, y: 14.66, z: -4.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 71.0849, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 67.6277, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -6740,9 +6770,9 @@ Animator:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1882631960}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 6db04bc21c5245d428bf2464b5cc5376, type: 3}
-  m_Controller: {fileID: 9100000, guid: 9f8eb855b693b644e945fed05bfcc090, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1f307683be017bf4fa5576d42ed0816f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6818,7 +6848,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &1888641214
 GameObject:
   m_ObjectHideFlags: 0
