@@ -5,75 +5,40 @@ public class Morty_Dialouge : MonoBehaviour {
 
     public string[] Player;
     public string[] Morty;
+    public int dialougeState;
     bool DisplayDialouge = false;
     bool Greetings = false;
     bool FinishedTalk = false;
 
     void OnGUI()
     {
-        GUILayout.BeginArea(new Rect(700, 600, 400, 400));  // Location of the GUI
-        if (DisplayDialouge && !Greetings && !FinishedTalk)
+        GUILayout.BeginArea(new Rect(700, 500, 400, 400));  // Location of the GUI
+        if (DisplayDialouge && dialougeState < Player.Length && !FinishedTalk)  // Talking with Morty
         {
-            GUILayout.Label(Morty[0]);
-            if (GUILayout.Button(Player[0]))
+            GUILayout.Label(Morty[dialougeState]);
+            if (GUILayout.Button(Player[dialougeState]))
             {
-                Greetings = true;
-                GUILayout.Label(Morty[1]);
-
-                if (GUILayout.Button(Player[1]))
-                {
-                    GUILayout.Label(Morty[2]);
-
-                    if (GUILayout.Button(Player[2]))
-                    {
-                        FinishedTalk = true;
-                        GUILayout.Label(Morty[3]);
-
-                        if (GUILayout.Button(Player[3]))
-                        {
-                            DisplayDialouge = false;
-                        }
-                    }
-                }
-            }
-        }
-
-        if (DisplayDialouge && Greetings && !FinishedTalk)
-        {
-            GUILayout.Label(Morty[1]);
-
-            if (GUILayout.Button(Player[1]))
-            {
-                GUILayout.Label(Morty[2]);
-
-                if (GUILayout.Button(Player[2]))
+                //Greetings = true;
+                dialougeState++;
+                if (dialougeState >= Player.Length) // Dialouge can't move past leanght of Player Dialouge
                 {
                     FinishedTalk = true;
-                    GUILayout.Label(Morty[3]);
-
-                    if (GUILayout.Button(Player[3]))
-                    {
-                        DisplayDialouge = false;
-                    }
-                }
-            }
-        }
-
-        if (DisplayDialouge && Greetings && FinishedTalk)
-        {
-            if (GUILayout.Button(Player[2]))
-            {
-                FinishedTalk = true;
-                GUILayout.Label(Morty[3]);
-
-                if (GUILayout.Button(Player[3]))
-                {
                     DisplayDialouge = false;
                 }
             }
         }
+        if (DisplayDialouge && FinishedTalk)    // After you have finished talking with Morty
+        {
+            GUILayout.Label(Morty[3]);
+            if (GUILayout.Button(Player[3]))
+            {
+                DisplayDialouge = false;
+            }
+        }
 
-        GUILayout.EndArea();
+
+
+            GUILayout.EndArea();
 
     }
 

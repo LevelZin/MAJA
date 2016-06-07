@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));   // Button input
-        GetComponent<Rigidbody>().AddForce(input * Speed);  // Move in the selected direction
+        GetComponent<Rigidbody>().MovePosition(transform.position + (input * Speed));  // Move in the selected direction
 
         if (input != Vector3.zero)  // If character has not moved
         {
