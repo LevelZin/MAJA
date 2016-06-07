@@ -16,7 +16,7 @@ public class StartGame : MonoBehaviour {
         if (Input.GetButtonDown("Submit"))
         {
 
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
 
         }
 	

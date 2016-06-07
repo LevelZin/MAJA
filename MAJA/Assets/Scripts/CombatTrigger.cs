@@ -49,6 +49,6 @@ public class CombatTrigger : MonoBehaviour {
     IEnumerator StartDelay()
     {
         yield return new WaitForSeconds(5.0f);   //Wait
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }
