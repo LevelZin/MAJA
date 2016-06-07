@@ -228,7 +228,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1081911825}
+      - m_Target: {fileID: 1121172632}
         m_MethodName: PerformAttack
         m_Mode: 3
         m_Arguments:
@@ -348,34 +348,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 275239474}
---- !u!1 &379220259
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 379220260}
-  m_Layer: 0
-  m_Name: PlayerPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &379220260
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 379220259}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1081911831}
-  m_RootOrder: 3
 --- !u!1 &389762191
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,72 +434,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22459786, guid: 21d8e685cd9067247a3de628a8eab4f9,
     type: 2}
   m_PrefabInternal: {fileID: 1866296737}
---- !u!1001 &428812845
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -4.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.8545608
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -2.0965176
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.53267515
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.07034045
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.83613265
-      objectReference: {fileID: 0}
-    - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.11041513
-      objectReference: {fileID: 0}
-    - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &634163411
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,10 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTurn: 0
-  objList:
-  - {fileID: 1973137482}
-  - {fileID: 1081911825}
-  - {fileID: 1081911825}
+  objList: []
   enemy: {fileID: 1973137482}
   delay: 2
   battleCanvas: {fileID: 1217039447}
@@ -576,7 +479,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!114 &634163414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,7 +654,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1081911825}
+      - m_Target: {fileID: 1121172632}
         m_MethodName: PerformAttack
         m_Mode: 3
         m_Arguments:
@@ -940,80 +843,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1057029722}
---- !u!1 &1081911824 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-  m_PrefabInternal: {fileID: 428812845}
---- !u!114 &1081911825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1081911824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 838ff9d7cdb479946abc7b14f07a8644, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StatHP: 100
-  StatSP: 100
-  StatPow: 5
-  StatRes: 5
-  StatSpd: 5
-  Enemy: {fileID: 1973137477}
-  player: {fileID: 1081911825}
-  flee: 0
-  duration: 3
-  m_HP: 100
-  m_SP: 5
-  healthbar: {fileID: 83474237}
-  spellbar: {fileID: 414732976}
-  initiative: 0
-  target: {fileID: 1973137482}
-  SlashVulnerability: 1
-  BashVulnerability: 1
-  FireVulnerability: 1
-  IceVulnerability: 1
-  ThunderVulnerability: 1
-  EarthVulnerability: 1
-  ForceVulnerability: 1
-  MysticVulnerability: 1
-  gameManager: {fileID: 634163412}
-  feedbackText: {fileID: 0}
-  ability:
-  - attack_name: Attack
-    damage: 10
-  - attack_name: Skill
-    damage: 20
-  - attack_name: Meditate
-    damage: -30
-  - attack_name: Wait
-    damage: 0
-  - attack_name: Flee
-    damage: 0
-  actionButtons:
-  - {fileID: 1762877383}
-  - {fileID: 275239476}
-  - {fileID: 2087437559}
-  - {fileID: 1858540947}
-  - {fileID: 389762193}
-  battleCanvas: {fileID: 1217039447}
---- !u!114 &1081911826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1081911824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ffc6ffd5697bd4ca8a89b5bcdaedb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 1081911824}
---- !u!4 &1081911831 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-  m_PrefabInternal: {fileID: 428812845}
 --- !u!1 &1084209650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +919,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1081911825}
+      - m_Target: {fileID: 1121172632}
         m_MethodName: PerformAttack
         m_Mode: 3
         m_Arguments:
@@ -1212,7 +1041,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1081911825}
+      - m_Target: {fileID: 1121172632}
         m_MethodName: PerformAttack
         m_Mode: 3
         m_Arguments:
@@ -1334,7 +1163,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1081911825}
+      - m_Target: {fileID: 1121172632}
         m_MethodName: PerformAttack
         m_Mode: 3
         m_Arguments:
@@ -1380,6 +1209,78 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1090957987}
+--- !u!1 &1121172630 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 188930, guid: d1fa7d492ef69fd40bdce4be70ae70ff, type: 2}
+  m_PrefabInternal: {fileID: 1779956031}
+--- !u!114 &1121172631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1121172630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ffc6ffd5697bd4ca8a89b5bcdaedb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1121172630}
+--- !u!114 &1121172632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1121172630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838ff9d7cdb479946abc7b14f07a8644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatHP: 100
+  StatSP: 100
+  StatPow: 0
+  StatRes: 0
+  StatSpd: 0
+  Enemy: {fileID: 1973137477}
+  Player: {fileID: 1121172630}
+  player: {fileID: 1121172632}
+  enemy: {fileID: 1973137482}
+  flee: 0
+  duration: 3
+  m_HP: 4
+  m_SP: 100
+  healthbar: {fileID: 83474237}
+  spellbar: {fileID: 414732976}
+  initiative: 0
+  target: {fileID: 1973137482}
+  SlashVulnerability: 1
+  BashVulnerability: 1
+  FireVulnerability: 1
+  IceVulnerability: 1
+  ThunderVulnerability: 1
+  EarthVulnerability: 1
+  ForceVulnerability: 1
+  MysticVulnerability: 1
+  gameManager: {fileID: 634163412}
+  feedbackText: {fileID: 0}
+  ability:
+  - attack_name: Attack
+    damage: 10
+  - attack_name: Skill
+    damage: 20
+  - attack_name: Meditate
+    damage: -40
+  - attack_name: Wait
+    damage: 0
+  - attack_name: Flee
+    damage: 0
+  actionButtons:
+  - {fileID: 1762877383}
+  - {fileID: 275239476}
+  - {fileID: 2087437559}
+  - {fileID: 1858540947}
+  - {fileID: 389762193}
+  battleCanvas: {fileID: 1217039447}
 --- !u!1 &1198911158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,6 +1684,60 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1762877381}
+--- !u!1001 &1779956031
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 474612, guid: d1fa7d492ef69fd40bdce4be70ae70ff, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.734973
+      objectReference: {fileID: 0}
+    - target: {fileID: 474612, guid: d1fa7d492ef69fd40bdce4be70ae70ff, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.8545608
+      objectReference: {fileID: 0}
+    - target: {fileID: 474612, guid: d1fa7d492ef69fd40bdce4be70ae70ff, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.5245589
+      objectReference: {fileID: 0}
+    - target: {fileID: 474612, guid: d1fa7d492ef69fd40bdce4be70ae70ff, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474612, guid: d1fa7d492ef69fd40bdce4be70ae70ff, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.6861485
+      objectReference: {fileID: 0}
+    - target: {fileID: 474612, guid: d1fa7d492ef69fd40bdce4be70ae70ff, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474612, guid: d1fa7d492ef69fd40bdce4be70ae70ff, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7274615
+      objectReference: {fileID: 0}
+    - target: {fileID: 474612, guid: d1fa7d492ef69fd40bdce4be70ae70ff, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 474612, guid: d1fa7d492ef69fd40bdce4be70ae70ff, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 86.652
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431548, guid: d1fa7d492ef69fd40bdce4be70ae70ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402392, guid: d1fa7d492ef69fd40bdce4be70ae70ff, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d1fa7d492ef69fd40bdce4be70ae70ff, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1858540945
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,15 +2109,17 @@ MonoBehaviour:
   StatRes: 0
   StatSpd: 0
   Enemy: {fileID: 1973137477}
-  player: {fileID: 0}
+  Player: {fileID: 1121172630}
+  player: {fileID: 1121172632}
+  enemy: {fileID: 1973137482}
   flee: 0
-  duration: 0
+  duration: 5
   m_HP: 100
   m_SP: 0
   healthbar: {fileID: 1198911159}
   spellbar: {fileID: 1057029723}
   initiative: 0
-  target: {fileID: 1081911825}
+  target: {fileID: 1121172632}
   SlashVulnerability: 1
   BashVulnerability: 1
   FireVulnerability: 1

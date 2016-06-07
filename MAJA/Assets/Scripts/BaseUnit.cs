@@ -30,7 +30,13 @@ public class BaseUnit : MonoBehaviour
     protected GameObject Enemy;
 
     [SerializeField]
+    protected GameObject Player;
+
+    [SerializeField]
     protected BaseUnit player;
+
+    [SerializeField]
+    protected BaseUnit enemy;
 
     public bool flee = false;
 
@@ -148,16 +154,11 @@ public class BaseUnit : MonoBehaviour
         //Added by Maria
         spellbar.sizeDelta = new Vector2(m_SP * 4.86f, 24.0f);
 
-        //Added by Maria
-        if(HP <= 0)
-        {
-            EnemyDie();
-        }
-    }
-
-    void FixedUpdate()
-    {
-        
+        ////Added by Maria
+        //if (enemy.HP <= 0)
+        //{
+        //    EnemyDie();
+        //}
     }
 
     public void RecieveDamage(int damage)
@@ -194,13 +195,24 @@ public class BaseUnit : MonoBehaviour
 
     public void PlayerDie()
     {
+        
+        player.HP = 0;
+        player.m_HP = 0;
+        player.StatHP = 0;
         Debug.Log("Player died.");
-        GameObject.Destroy(player);
+
+        StartCoroutine(StartDelay(3));
+        
     }
 
     IEnumerator StartDelay(float duration)
     {
+        Animator Maja = GetComponent<Animator>();
+        Maja.SetTrigger("Maja death");
         yield return new WaitForSeconds(duration);   //Wait
-        SceneManager.LoadScene(0); 
+        
+        //GameObject.Destroy(Player);
+        SceneManager.LoadScene(0);        
     }
+
 }

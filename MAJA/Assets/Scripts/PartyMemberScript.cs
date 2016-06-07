@@ -15,6 +15,7 @@ public class PartyMemberScript : BaseUnit
 
     void Awake()
     {
+        Animator Maja = GetComponent<Animator>();
         for (int i = 0; i < actionButtons.Length; i++)
         {
             actionButtons[i].text = ability[i].attack_name;
@@ -30,19 +31,23 @@ public class PartyMemberScript : BaseUnit
         }
     }
 
-    void update()
+    void LateUpdate()
     {
-        if(HP <= 0)
+        if (player.HP <= 0)
         {
-            PlayerDie();
+            battleCanvas.GetComponent<Canvas>().enabled = false;
         }
     }
 
     public void PerformAttack(int attackNumber)
     {
+        
+
+        Animator Maja = GetComponent<Animator>();
         if (attackNumber == 0)
         {
             Debug.Log("Attacking");
+            Maja.SetTrigger("Maja attack");
             target.RecieveDamage(ability[0].damage);
             gameManager.AttackDone();
         }
@@ -83,7 +88,7 @@ public class PartyMemberScript : BaseUnit
             battleCanvas.GetComponent<Canvas>().enabled = false;
             //gameManager.AttackDone();
             Debug.Log("Flee");
-            StartCoroutine(StartDelayFlee(3));
+            StartCoroutine(StartDelayFlee(3.0f));
         }
     }
     
