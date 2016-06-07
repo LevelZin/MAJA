@@ -115,6 +115,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838ff9d7cdb479946abc7b14f07a8644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StatHP: 0
+  StatSP: 0
+  StatPow: 0
+  StatRes: 0
+  StatSpd: 0
+  Enemy: {fileID: 0}
+  Player: {fileID: 0}
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  flee: 0
+  duration: 0
+  m_HP: 0
+  m_SP: 0
+  healthbar: {fileID: 0}
+  spellbar: {fileID: 0}
+  initiative: 0
+  target: {fileID: 0}
+  SlashVulnerability: 1
+  BashVulnerability: 1
+  FireVulnerability: 1
+  IceVulnerability: 1
+  ThunderVulnerability: 1
+  EarthVulnerability: 1
+  ForceVulnerability: 1
+  MysticVulnerability: 1
+  gameManager: {fileID: 0}
+  feedbackText: {fileID: 0}
+  ability: []
+  actionButtons: []
+  battleCanvas: {fileID: 0}
 --- !u!23 &197402855
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -326,6 +356,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecc064b56b7fc54f8e6ef71979781eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StatHP: 0
+  StatSP: 0
+  StatPow: 0
+  StatRes: 0
+  StatSpd: 0
+  Enemy: {fileID: 0}
+  Player: {fileID: 0}
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  flee: 0
+  duration: 0
+  m_HP: 0
+  m_SP: 0
+  healthbar: {fileID: 0}
+  spellbar: {fileID: 0}
+  initiative: 0
+  target: {fileID: 0}
+  SlashVulnerability: 1
+  BashVulnerability: 1
+  FireVulnerability: 1
+  IceVulnerability: 1
+  ThunderVulnerability: 1
+  EarthVulnerability: 1
+  ForceVulnerability: 1
+  MysticVulnerability: 1
+  gameManager: {fileID: 0}
+  feedbackText: {fileID: 0}
+  ability: []
 --- !u!23 &554190230
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -474,6 +532,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16fd562164ea61428c5014595203f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTurn: 0
+  objList: []
+  enemy: {fileID: 0}
+  delay: 0
+  battleCanvas: {fileID: 0}
 --- !u!4 &1559918308
 Transform:
   m_ObjectHideFlags: 0
