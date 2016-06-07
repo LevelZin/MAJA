@@ -2,6 +2,9 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(AudioSource))]
+
+
 public class BaseUnit : MonoBehaviour
 {
     //Stats
@@ -37,6 +40,11 @@ public class BaseUnit : MonoBehaviour
 
     [SerializeField]
     protected BaseUnit enemy;
+
+    [SerializeField]
+    protected AudioClip scream;
+
+    AudioSource audio;
 
     public bool flee = false;
 
@@ -207,6 +215,8 @@ public class BaseUnit : MonoBehaviour
 
     IEnumerator StartDelayMaja(float duration)
     {
+        audio = GetComponent<AudioSource>();
+        GetComponent<AudioSource>().PlayOneShot(scream, 0.6F);
         Animator Maja = GetComponent<Animator>();
         Maja.SetTrigger("Maja death");
 
@@ -218,8 +228,9 @@ public class BaseUnit : MonoBehaviour
 
     IEnumerator StartDelayEnemy(float duration)
     {
+        Animator Kitten = GetComponent<Animator>();
+        Kitten.SetTrigger("Die");
         //Enemy die animations here!
-
         yield return new WaitForSeconds(duration);   //Wait
         SceneManager.LoadScene(1);
         GameObject.Destroy(Enemy);

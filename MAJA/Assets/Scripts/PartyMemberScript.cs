@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class PartyMemberScript : BaseUnit
 {
     [SerializeField]
@@ -10,6 +12,11 @@ public class PartyMemberScript : BaseUnit
 
     [SerializeField]
     GameObject battleCanvas;
+
+    [SerializeField]
+    protected AudioClip swing;
+
+    AudioSource audio;
 
     bool alive = true;
 
@@ -41,18 +48,20 @@ public class PartyMemberScript : BaseUnit
 
     public void PerformAttack(int attackNumber)
     {
-        
+        audio = GetComponent<AudioSource>();
 
         Animator Maja = GetComponent<Animator>();
         if (attackNumber == 0)
         {
             Debug.Log("Attacking");
+            GetComponent<AudioSource>().PlayOneShot(swing, 0.6F);
             Maja.SetTrigger("Maja attack");
             target.RecieveDamage(ability[0].damage);
             gameManager.AttackDone();
         }
         else if (attackNumber == 1)
         {
+            GetComponent<AudioSource>().PlayOneShot(swing, 0.6F);
             target.RecieveDamage(ability[1].damage);
             player.SP -= 20;
             Debug.Log("Casts skill");
@@ -87,6 +96,7 @@ public class PartyMemberScript : BaseUnit
         }
         else
         {
+            GetComponent<AudioSource>().PlayOneShot(scream, 0.6F);
             flee = true;
             battleCanvas.GetComponent<Canvas>().enabled = false;
             //gameManager.AttackDone();
