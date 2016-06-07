@@ -211,7 +211,7 @@ public class BaseUnit : MonoBehaviour
         Maja.SetTrigger("Maja death");
 
         yield return new WaitForSeconds(duration);   //Wait
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
         GameObject.Destroy(Player);
                 
     }
@@ -221,7 +221,7 @@ public class BaseUnit : MonoBehaviour
         //Enemy die animations here!
 
         yield return new WaitForSeconds(duration);   //Wait
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
         GameObject.Destroy(Enemy);
         
     }

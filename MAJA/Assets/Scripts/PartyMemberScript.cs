@@ -98,7 +98,7 @@ public class PartyMemberScript : BaseUnit
     IEnumerator StartDelayFlee(float duration)
     {
         yield return new WaitForSeconds(duration);   //Wait
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
 }
