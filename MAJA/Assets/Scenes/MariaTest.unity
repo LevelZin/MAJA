@@ -151,7 +151,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
 --- !u!1 &267739065
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +560,7 @@ MonoBehaviour:
   objList:
   - {fileID: 1973137482}
   - {fileID: 1081911825}
+  - {fileID: 1081911825}
   enemy: {fileID: 1973137482}
   delay: 2
   battleCanvas: {fileID: 1217039447}
@@ -575,7 +576,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!114 &634163414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,7 +886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1057029723
 RectTransform:
   m_ObjectHideFlags: 0
@@ -961,6 +962,8 @@ MonoBehaviour:
   StatSpd: 5
   Enemy: {fileID: 1973137477}
   player: {fileID: 1081911825}
+  flee: 0
+  duration: 3
   m_HP: 100
   m_SP: 5
   healthbar: {fileID: 83474237}
@@ -994,6 +997,7 @@ MonoBehaviour:
   - {fileID: 2087437559}
   - {fileID: 1858540947}
   - {fileID: 389762193}
+  battleCanvas: {fileID: 1217039447}
 --- !u!114 &1081911826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1533,7 +1537,7 @@ RectTransform:
   m_Children:
   - {fileID: 979470986}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1677,6 +1681,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &1351878483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1351878484}
+  m_Layer: 0
+  m_Name: none
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1351878484
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1351878483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &1762877381
 GameObject:
   m_ObjectHideFlags: 0
@@ -2015,16 +2047,16 @@ Prefab:
     - target: {fileID: 11490816, guid: 21d8e685cd9067247a3de628a8eab4f9, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b5affd4cb3b42bc49bd37a944f4ffbfe,
+      objectReference: {fileID: 21300000, guid: 7d2de7c3de246f149966fcf37d8affb6,
         type: 3}
     - target: {fileID: 11438722, guid: 21d8e685cd9067247a3de628a8eab4f9, type: 2}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: bb47f3f48e71fe14498d14f02a5a835e, type: 3}
+      objectReference: {fileID: 2800000, guid: 6879240fe7f0cb6478858a6778b2288c, type: 3}
     - target: {fileID: 11499486, guid: 21d8e685cd9067247a3de628a8eab4f9, type: 2}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: 8bdee467d91427e43a904a4f3df4c348, type: 3}
+      objectReference: {fileID: 2800000, guid: e23cc78681689de4d91d6a4b35468a2b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21d8e685cd9067247a3de628a8eab4f9, type: 2}
   m_IsPrefabParent: 0
@@ -2123,6 +2155,8 @@ MonoBehaviour:
   StatSpd: 0
   Enemy: {fileID: 1973137477}
   player: {fileID: 0}
+  flee: 0
+  duration: 0
   m_HP: 100
   m_SP: 0
   healthbar: {fileID: 1198911159}
@@ -2142,6 +2176,8 @@ MonoBehaviour:
   ability:
   - attack_name: Attack
     damage: 10
+  - attack_name: Skill
+    damage: 20
 --- !u!1 &2087437557
 GameObject:
   m_ObjectHideFlags: 0
