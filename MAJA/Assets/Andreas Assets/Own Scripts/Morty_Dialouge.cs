@@ -12,7 +12,7 @@ public class Morty_Dialouge : MonoBehaviour {
 
     void OnGUI()
     {
-        GUILayout.BeginArea(new Rect(700, 500, 400, 400));  // Location of the GUI
+        GUILayout.BeginArea(new Rect(600, 400, 300, 300));  // Location of the GUI
         if (DisplayDialouge && dialougeState < Player.Length && !FinishedTalk)  // Talking with Morty
         {
             GUILayout.Label(Morty[dialougeState]);
